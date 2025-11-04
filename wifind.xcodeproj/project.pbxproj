@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A98961282EBAB4D60029602B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98961262EBAB4D60029602B /* main.swift */; };
+		A989612A2EBAB4DF0029602B /* CWNetworkCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98961292EBAB4DF0029602B /* CWNetworkCodable.swift */; };
+		A989612C2EBAB4F70029602B /* CWChannelCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989612B2EBAB4F70029602B /* CWChannelCodable.swift */; };
+		A989612F2EBAB5150029602B /* CWNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A989612E2EBAB5150029602B /* CWNetwork.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		A99992902EBAA72F009186B7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,16 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A98961262EBAB4D60029602B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A98961292EBAB4DF0029602B /* CWNetworkCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNetworkCodable.swift; sourceTree = "<group>"; };
+		A989612B2EBAB4F70029602B /* CWChannelCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWChannelCodable.swift; sourceTree = "<group>"; };
+		A989612E2EBAB5150029602B /* CWNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNetwork.swift; sourceTree = "<group>"; };
 		A99992922EBAA72F009186B7 /* wifind */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wifind; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		A99992942EBAA72F009186B7 /* wifind */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = wifind;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A999928F2EBAA72F009186B7 /* Frameworks */ = {
@@ -41,10 +44,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A98961272EBAB4D60029602B /* wifind */ = {
+			isa = PBXGroup;
+			children = (
+				A989612D2EBAB50D0029602B /* Extensions */,
+				A98961262EBAB4D60029602B /* main.swift */,
+				A989612B2EBAB4F70029602B /* CWChannelCodable.swift */,
+				A98961292EBAB4DF0029602B /* CWNetworkCodable.swift */,
+			);
+			path = wifind;
+			sourceTree = "<group>";
+		};
+		A989612D2EBAB50D0029602B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A989612E2EBAB5150029602B /* CWNetwork.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A99992892EBAA72F009186B7 = {
 			isa = PBXGroup;
 			children = (
-				A99992942EBAA72F009186B7 /* wifind */,
+				A98961272EBAB4D60029602B /* wifind */,
 				A99992932EBAA72F009186B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,9 +93,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				A99992942EBAA72F009186B7 /* wifind */,
 			);
 			name = wifind;
 			packageProductDependencies = (
@@ -121,6 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98961282EBAB4D60029602B /* main.swift in Sources */,
+				A989612A2EBAB4DF0029602B /* CWNetworkCodable.swift in Sources */,
+				A989612F2EBAB5150029602B /* CWNetwork.swift in Sources */,
+				A989612C2EBAB4F70029602B /* CWChannelCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,12 +273,28 @@
 		A999929A2EBAA72F009186B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JGND254B7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				INFOPLIST_KEY_NSLocationUsageDescription = idk;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neon443.wifind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -265,12 +304,28 @@
 		A999929B2EBAA72F009186B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JGND254B7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				INFOPLIST_KEY_NSLocationUsageDescription = idk;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neon443.wifind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
